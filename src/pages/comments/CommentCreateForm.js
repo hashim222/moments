@@ -8,6 +8,8 @@ import styles from "../../styles/CommentCreateEditForm.module.css";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 
+// import RichTextEditor from "../../components/RichTextEditor";
+
 function CommentCreateForm(props) {
   const { post, setPost, setComments, profileImage, profile_id } = props;
   const [content, setContent] = useState("");
@@ -55,7 +57,16 @@ function CommentCreateForm(props) {
             value={content}
             onChange={handleChange}
             rows={2}
+            
           />
+          {/* <RichTextEditor editor>
+            <Form.Control
+              placeholder="my comment..."
+              value={content}
+              onChange={handleChange}
+              rows={2}
+            />
+          </RichTextEditor> */}
         </InputGroup>
       </Form.Group>
       <button
